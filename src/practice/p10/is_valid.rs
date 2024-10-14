@@ -14,11 +14,16 @@ fn is_valid(s: String) -> bool {
 #[test]
 fn is_valid_test2() {
     let test_data = [
-        ("{}{}{{{}}{}}{}{}", true),
-        ("{}{}{{{}}{}}{}{}}", false),
-        ("{}{}{{{}}{}}{}{", false),
+        //input expected
+        ("{}", true),
+        ("{}{}", true),
+        ("{{}}", true),
+        ("{{}{}}", true),
+        ("{{}", false),
+        ("{}}", false),
         ("}{", false),
-        ("}{}{}{{{}}{}}{}{}", false),
+        ("{", false),
+        ("}", false),
     ];
 
     for (s, r) in test_data {
@@ -28,15 +33,24 @@ fn is_valid_test2() {
 
 #[test]
 fn is_valid_test() {
-    let test_data = [
-        ("{}{}{{{}}{}}{}{}", true),
-        ("{}{}{{{}}{}}{}{}}", false),
-        ("{}{}{{{}}{}}{}{", false),
+    let cases = [
+        //input expected
+        ("{}", true),
+        ("{}{}", true),
+        ("{{}}", true),
+        ("{{}{}}", true),
+        ("{{}", false),
+        ("{}}", false),
         ("}{", false),
-        ("}{}{}{{{}}{}}{}{}", false),
+        ("{", false),
+        ("}", false),
     ];
 
-    test_data
+    cases
         .iter()
-        .for_each(|&(s, v)| assert_eq!(is_valid(s.to_string()), v));
+        .for_each(|(input, expected)| {
+            let real = is_valid(input.to_string());
+            println!("Case {}: expected: {}, real: {}", input, expected, real);
+            assert_eq!(real, *expected);
+        });
 }
