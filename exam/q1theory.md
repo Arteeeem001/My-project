@@ -9,7 +9,7 @@
 7. String. Char. Encodings. Скільки байтів займає символ в String, чому. ASCII, UTF8.
 8. String. Char. Encodings. Чи можна модифікувати String. mutable/immutable
 9. String. Char. Encodings. Як зрозуміти чи можна різати String в місці який нам потрібно
-10. Композитні типи. Tuple, Unit.
+10. Композитні типи. Tuple, Unit. Які значення має тип Unit
 11. Композитні типи. Named Tuple (Tuple Struct), Unit.
 12. Композитні типи. Struct, Unit.
 13. Композитні типи. Enum. Для чого. Переваги, недоліки.
@@ -17,12 +17,12 @@
 15. Композитні типи. Enum. Що таке exhaustiveness check.
 16. Патерн матчінг. Для чого використовується, як виглядає else.
 17. Патерн матчінг. Обмеження
-18. Патерн матчінг. Практичні приклади.
+18. Патерн матчінг. Практичні приклади. exhaustiveness check.
 19. Управління виконанням. if, else, match,
 20. Управління виконанням. Булева алгебра. Операції NOT, AND, OR, XOR, =>
 21. Управління виконанням. loop, while, for, break, continue
 22. Функції, замакиння, різниця, плюси, мінуси, обмеження.
-23. Функції, замакиння. Unit, implicit Unit, explicit Unit
+23. Функції, замакиння. Unit, implicit Unit, explicit Unit. Які значення має тип Unit
 24. Функції, замакиння.
 25. Impl блок. Функції, Асоційовані функції, self, &self.
 26. Traits. використання
